@@ -5,13 +5,34 @@ const NavBar = () => {
   const MenuLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/donation">Donation</NavLink>
+        <NavLink
+          to="/donation"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+          }
+        >
+          Donation
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/statistics">Statistics</NavLink>
+        <NavLink
+          to="/statistics"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+          }
+        >
+          Statistics
+        </NavLink>
       </li>
     </>
   );
@@ -51,7 +72,7 @@ const NavBar = () => {
         <img className="w-40" src={logo} alt="" />
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{MenuLinks}</ul>
+        <ul className="flex gap-5">{MenuLinks}</ul>
       </div>
     </div>
   );

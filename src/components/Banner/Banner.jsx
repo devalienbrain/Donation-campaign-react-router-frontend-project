@@ -14,7 +14,7 @@ const Banner = () => {
       </div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl text-black font-bold">
+          <h1 className="mb-5 text-2xl md:text-5xl text-black font-bold">
             I Grow By Helping People In Need
           </h1>
           <input
