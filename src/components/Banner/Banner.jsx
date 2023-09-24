@@ -1,9 +1,12 @@
 const Banner = () => {
   return (
     <div
-      className="hero min-h-screen bg-[#FFFFFFF2]"
+      className="hero bg-[#FFFFFFF2]"
       style={{
         backgroundImage: "url(https://i.ibb.co/hLQfPrj/Banner-Img.jpg)",
+        objectFit: "cover",
+        width: "100%",
+        height: "100%",
       }}
     >
       <div className="hero-overlay bg-opacity-10">
