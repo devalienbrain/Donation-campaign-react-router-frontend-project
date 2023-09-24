@@ -1,10 +1,27 @@
 import { createBrowserRouter } from "react-router-dom";
-import NavBar from "../components/Header/NavBar/NavBar";
+import Home from "../components/Home/Home";
+import MainLayout from "../Layout/MainLayout/MainLayout";
+import Donation from "../pages/Donation/Donation";
+import Statistics from "../pages/Statistics/Statistics";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <NavBar></NavBar>,
+    element: <MainLayout></MainLayout>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/donation",
+        element: <Donation></Donation>,
+      },
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>,
+      },
+    ],
   },
 ]);
 export default Router;
