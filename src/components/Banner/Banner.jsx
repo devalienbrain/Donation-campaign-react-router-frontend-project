@@ -18,7 +18,7 @@ const Banner = () => {
             I Grow By Helping People In Need
           </h1>
           <input
-            className="h-10 px-4 rounded-l-lg text-black"
+            className="h-10 px-4 rounded-l-lg text-black border border-gray-200"
             type="text"
             placeholder="Search here..."
             name=""
