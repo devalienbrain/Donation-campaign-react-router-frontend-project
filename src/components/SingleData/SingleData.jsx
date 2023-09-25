@@ -10,11 +10,13 @@ const SingleData = ({ singleData }) => {
   // };
 
   return (
-    <div className="" style={{ background: colors.colorBg }}>
+    <div className="rounded-lg" style={{ background: colors.colorBg }}>
       <Link to={"/allData/:id"}>
-        <img src={image} alt="Alternative Image" />
-        <button>{category}</button>
-        <h3>{title}</h3>
+        <img className="w-full" src={image} alt="Alternative Image" />
+        <div className="p-4" style={{ color: colors.textColor }}>
+          <button className="px-2 py-1 rounded" style={{ background: colors.btnBg }}>{category}</button>
+          <h3>{title}</h3>
+        </div>
       </Link>
     </div>
   );
