@@ -24,7 +24,7 @@ const Router = createBrowserRouter([
         element: <Statistics></Statistics>,
       },
       {
-        path: "/allData/:id",
+        path: "/singleData/:id",
         element: <DataDetails></DataDetails>,
         loader: () => fetch("/data.json"),
       },
