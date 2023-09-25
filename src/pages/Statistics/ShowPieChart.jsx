@@ -4,8 +4,10 @@ import { getStoredDonationData } from "../../utility/localstorage";
 const storedDonateData = getStoredDonationData();
 const totalDonation = storedDonateData.length;
 
+const remainingDonation = 12 - totalDonation;
+
 const data = [
-  { name: "Total Donation", value: 12 },
+  { name: "Total Donation", value: remainingDonation },
   { name: "Your Donation", value: totalDonation },
 ];
 
@@ -48,7 +50,7 @@ const ShowPieChart = () => {
           cy="50%"
           labelLine={false}
           label={renderCustomizedLabel}
-          outerRadius={80}
+          outerRadius={120}
           fill="#8884d8"
           dataKey="value"
         >
