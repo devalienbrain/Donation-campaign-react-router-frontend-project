@@ -86,7 +86,7 @@
           "price": "290.00",
           "colors": {
                "colorBg": "#FF444A26",
-               "textColor": "FF444A",
+               "textColor": "#FF444A",
                "btnBg": "#FF444A33"
           }
      },
@@ -125,7 +125,7 @@
           "price": "290.00",
           "colors": {
                "colorBg": "#FF444A26",
-               "textColor": "FF444A",
+               "textColor": "#FF444A",
                "btnBg": "#FF444A33"
           }
      },

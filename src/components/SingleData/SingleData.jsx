@@ -15,7 +15,7 @@ const SingleData = ({ singleData }) => {
           >
             {category}
           </button>
-          <h3>{title}</h3>
+          <h3 className="font-semibold">{title}</h3>
         </div>
       </div>
     </Link>
