@@ -1,8 +1,12 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import { getStoredDonationData } from "../../utility/localstorage";
+
+const storedDonateData = getStoredDonationData();
+const totalDonation = storedDonateData.length;
 
 const data = [
   { name: "Total Donation", value: 12 },
-  { name: "Your Donation", value: 4 },
+  { name: "Your Donation", value: totalDonation },
 ];
 
 const COLORS = ["#FF444A", "#00C49F"];
