@@ -1,7 +1,7 @@
 import { saveDonationData } from "../../utility/localstorage";
 
 const ShowDetails = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const { id, image, price, title, description } = data;
 
   const handleDonationList = () => {
