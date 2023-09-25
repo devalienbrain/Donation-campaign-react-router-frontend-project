@@ -2,7 +2,10 @@ const DonatedItem = ({ donatedData }) => {
   // console.log(donatedData);
   const { image, category, title, price, colors } = donatedData || {};
   return (
-    <div className="rounded-lg flex" style={{ background: colors.colorBg }}>
+    <div
+      className="rounded-lg flex flex-col lg:flex-row"
+      style={{ background: colors.colorBg }}
+    >
       <img
         className="rounded-l-lg rounded-r-none"
         src={image}
