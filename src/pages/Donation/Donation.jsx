@@ -6,17 +6,37 @@ import ShowDonatedItems from "./ShowDonatedItems";
 const Donation = () => {
   const datas = useLoaderData();
   const [donatedDatas, setDonatedDatas] = useState([]);
+  const [dataLength, setDtaLength] = useState(4);
   useEffect(() => {
     const storedDonateData = getStoredDonationData();
-    if (storedDonateData.length) {
+    const totalDonatedData = storedDonateData.length;
+    if (totalDonatedData) {
       const datasDonated = datas.filter((data) =>
         storedDonateData.includes(data.id)
       );
       // console.log(datasDonated);
       setDonatedDatas(datasDonated);
     }
-  }, []);
-  return <ShowDonatedItems donatedDatas={donatedDatas}></ShowDonatedItems>;
+  }, [datas]);
+
+  return (
+    <div>
+      <ShowDonatedItems
+        donatedDatas={donatedDatas}
+        dataLength={dataLength}
+      ></ShowDonatedItems>
+      <div className={donatedDatas.length === dataLength ? "hidden" : ""}>
+        <div className="flex justify-center mb-6">
+          <button
+            onClick={() => setDtaLength(donatedDatas.length)}
+            className="px-5 py-2 bg-[#FF444A] text-white font-semibold hover:bg-red-500"
+          >
+            Show All
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Donation;
