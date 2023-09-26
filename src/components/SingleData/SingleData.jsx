@@ -7,7 +7,7 @@ const SingleData = ({ singleData }) => {
   return (
     <Link to={`/singleData/${id}`}>
       <div className="rounded-lg" style={{ background: colors.colorBg }}>
-        <img className="w-full" src={image} alt="Alternative Image" />
+        <img className="w-full rounded-t" src={image} alt="Alternative Image" />
         <div className="p-4" style={{ color: colors.textColor }}>
           <button
             className="px-2 py-1 rounded"

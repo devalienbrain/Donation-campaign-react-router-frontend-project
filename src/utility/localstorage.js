@@ -13,5 +13,6 @@ const saveDonationData = (id) => {
     storedDonationDatas.push(id);
     localStorage.setItem("donation-data", JSON.stringify(storedDonationDatas));
   }
+  return isExists;
 };
 export { getStoredDonationData, saveDonationData };

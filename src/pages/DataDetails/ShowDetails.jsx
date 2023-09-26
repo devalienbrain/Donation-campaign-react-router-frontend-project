@@ -8,14 +8,18 @@ const ShowDetails = ({ data }) => {
   const { id, image, price, title, description, colors } = data;
 
   const handleDonationList = () => {
-    saveDonationData(id);
-    toast("Donated!");
+    const donatedAlready = saveDonationData(id);
+    if (!donatedAlready) {
+      toast("Donated susccessfully!");
+    } else {
+      toast("Oops! Already donated!");
+    }
   };
 
   return (
     <div className="mt-10 rounded">
       <ToastContainer></ToastContainer>
-      <img className="w-full" src={image} alt="Alternative Image" />
+      <img className="w-full rounded-md" src={image} alt="Alternative Image" />
       <div className="bg-[#0B0B0B80] opacity-50 p-6 -mt-20 h-20">
         <button
           onClick={handleDonationList}
