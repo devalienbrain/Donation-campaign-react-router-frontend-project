@@ -25,7 +25,7 @@ const Donation = () => {
         donatedDatas={donatedDatas}
         dataLength={dataLength}
       ></ShowDonatedItems>
-      <div className={donatedDatas.length === dataLength ? "hidden" : ""}>
+      <div className={donatedDatas.length <= dataLength ? "hidden" : ""}>
         <div className="flex justify-center mb-6">
           <button
             onClick={() => setDtaLength(donatedDatas.length)}
@@ -35,7 +35,7 @@ const Donation = () => {
           </button>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
