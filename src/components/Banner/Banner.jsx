@@ -24,12 +24,12 @@ const Banner = ({ setFromSearchInput }) => {
         <img className="w-full h-full" src="/images/BannerImg.png" alt="" />
       </div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
+        <div>
           <h1 className="mb-5 text-2xl md:text-5xl text-black font-bold">
             I Grow By Helping People In Need
           </h1>
           <input
-            className="h-10 px-4 rounded-l-lg text-black border border-gray-200"
+            className="h-10 px-2 md:px-4 rounded-l-lg text-black border border-gray-200"
             type="text"
             placeholder="Search here..."
             name="Search Input"
@@ -37,7 +37,7 @@ const Banner = ({ setFromSearchInput }) => {
           />
           <button
             onClick={handleSearchItemFromInput}
-            className="h-10 bg-[#FF444A] text-white px-4 rounded-r-lg"
+            className="h-10 bg-[#FF444A] text-white px-2 md:px-4 rounded-r-lg"
           >
             Search
           </button>

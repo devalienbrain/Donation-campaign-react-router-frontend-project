@@ -1,20 +1,21 @@
 import { useLoaderData } from "react-router-dom";
 import SingleData from "../SingleData/SingleData";
-import { useState } from "react";
 
 const AllData = ({ fromSearchInput }) => {
   let allData = useLoaderData();
   // console.log(allData);
-  console.log(fromSearchInput);
-  // const [displayData, setDisplayData] = useState(allData);
+  // console.log(fromSearchInput);
+  if (typeof fromSearchInput === 'string') {
+    fromSearchInput = fromSearchInput.toLowerCase();
+  }
   if (
-    fromSearchInput === "Education" ||
-    fromSearchInput === "Health" ||
-    fromSearchInput === "Clothing" ||
-    fromSearchInput === "Food"
+    fromSearchInput === "education" ||
+    fromSearchInput === "health" ||
+    fromSearchInput === "clothing" ||
+    fromSearchInput === "food"
   ) {
-    allData = allData.filter((aData) => aData.category === fromSearchInput);
-    // setDisplayData(temp);
+    console.log(fromSearchInput);
+    allData = allData.filter((aData) => aData.category.toLowerCase() === fromSearchInput);
   }
 
   return (

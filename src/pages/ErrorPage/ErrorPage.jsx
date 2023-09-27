@@ -4,12 +4,12 @@ const ErrorPage = () => {
   return (
     <div className="flex flex-col gap-7 min-h-screen justify-center items-center">
       <h2 className="text-4xl font-semibold text-red-700">Oops.. </h2>
-      <h1 className="text-5xl font-extralight">Wrong path!!!</h1>
+      <h1 className="text-4xl font-extralight">Wrong path!!!</h1>
       <Link
         to={"/"}
-        className="px-3 py-2 bg-slate-100 border border-black hover:bg-white rounded-lg"
+        className="px-5 py-2 bg-[#FF444A] text-white text-sm font-bold hover:bg-red-500 rounded"
       >
-        Click to go home page.
+        Click to go home
       </Link>
     </div>
   );
