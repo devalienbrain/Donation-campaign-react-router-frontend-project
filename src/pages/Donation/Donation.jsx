@@ -31,7 +31,7 @@ const Donation = () => {
             onClick={() => setDtaLength(donatedDatas.length)}
             className="px-5 py-2 bg-[#FF444A] text-white font-semibold hover:bg-red-500"
           >
-            Show All
+            See All
           </button>
         </div>
       </div>
